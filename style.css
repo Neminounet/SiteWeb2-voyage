@@ -1,0 +1,78 @@
+/* Font Shrikhand */
+@font-face {
+    font-family: 'shrikhandregular';
+    src: url('font/shrikhand-regular-webfont.woff2') format('woff2'),
+         url('font/shrikhand-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+/* Font Roboto */
+@font-face {
+    font-family: 'roboto_condensedbold';
+    src: url('font/robotocondensed-bold-webfont.woff2') format('woff2'),
+         url('font/robotocondensed-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'roboto_condensedbold_italic';
+    src: url('font/robotocondensed-bolditalic-webfont.woff2') format('woff2'),
+         url('font/robotocondensed-bolditalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'roboto_condenseditalic';
+    src: url('font/robotocondensed-italic-webfont.woff2') format('woff2'),
+         url('font/robotocondensed-italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'roboto_condensedlight';
+    src: url('font/robotocondensed-light-webfont.woff2') format('woff2'),
+         url('font/robotocondensed-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'roboto_condensedlight_italic';
+    src: url('font/robotocondensed-lightitalic-webfont.woff2') format('woff2'),
+         url('font/robotocondensed-lightitalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'roboto_condensedregular';
+    src: url('font/robotocondensed-regular-webfont.woff2') format('woff2'),
+         url('font/robotocondensed-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+/* Body */
+body {
+	max-width: 767px;
+	margin: 0;
+    font-family: 'roboto_condensedregular';
+}
+/* Header */
+header h1 {
+	font-family: 'shrikhandregular';
+	text-align: center;
+	margin: 20px 0 15px 0;
+}
+/* Section 1 */
+.geo {
+	display: flex;
+	justify-content: center;
+	background-color: #E0E0E0;
+	border-top: solid 2px rgba(189,189,189 ,0.4);
+	
+}	
+.geo p {
+	font-weight: bold;
+	font-size: 0.8em;
+}
+.mapMarker{
+	margin-right: 5px;
+}
