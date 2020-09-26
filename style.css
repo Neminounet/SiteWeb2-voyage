@@ -51,7 +51,6 @@
 }
 /* Body */
 body {
-	max-width: 767px;
 	margin: 0;
     font-family: 'roboto_condensedregular';
 }
@@ -62,17 +61,40 @@ header h1 {
 	margin: 20px 0 15px 0;
 }
 /* Section 1 */
+
 .geo {
 	display: flex;
 	justify-content: center;
 	background-color: #E0E0E0;
-	border-top: solid 2px rgba(189,189,189 ,0.4);
+	box-shadow: inset 0px 5px 5px 0px rgba(189,189,189,1);
 	
 }	
 .geo p {
 	font-weight: bold;
 	font-size: 0.8em;
 }
-.mapMarker{
+.mapMarker {
 	margin-right: 5px;
+}
+.intro {
+	text-align: center;
+	background-color: #EEEEEE;
+	padding-bottom: 35px;
+}
+.intro h2 {
+	width: 75%;
+	margin :auto;
+	padding-top: 20px;
+}
+.intro p {
+	font-family: 'roboto_condensedlight';
+}
+.intro button {
+	color: rgba(255,255,255,0.9);
+	font-weight: bold;
+	padding: 15px 10px 15px 10px;
+	background: linear-gradient(to top, #9356DC, #FF79DA);
+	border: none;
+	border-radius: 10% / 50%;
+	box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.75);
 }
