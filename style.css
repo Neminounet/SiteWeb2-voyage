@@ -205,3 +205,10 @@ header h1 {
     color: black;
     font-size: 1.4em;
 }
+footer {    
+    background-color: #263238;
+    color: white;
+}
+footer li {
+    list-style: none;
+}
