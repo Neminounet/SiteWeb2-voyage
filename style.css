@@ -269,7 +269,7 @@ margin-left: 8px;
     background-color: #EEEEEE;
 }
 .bodyResto header {
-    height: 250px;
+    position: relative;
 }
 figure {
     margin: 0;
@@ -279,8 +279,9 @@ figure {
 }
 .presResto {
     background-color: #EEEEEE;
-    position: relative;
-    bottom: 50px;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
     border-radius: 25px 25px 0 0;
 }
 .nomResto {
@@ -299,6 +300,9 @@ figure {
     margin: 20px 0 20px 0;
 }
 /* La carte */
+.menu {
+    margin-top: 30px;
+}
 .menu ul {
     padding: 0;
 }
