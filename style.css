@@ -54,6 +54,9 @@ body {
 	margin: 0;
     font-family: 'roboto_condensedregular';
 }
+li {
+    list-style: none;
+}
 a {
     text-decoration: none;
 }
@@ -63,12 +66,13 @@ header h1 {
 	text-align: center;
 	margin: 20px 0 15px 0;
 }
+
 /* Section 1 */
 
 .geo {
 	display: flex;
 	justify-content: center;
-	background-color: #eaeaea;
+	background-color: #E0E0E0;
 	box-shadow: inset 0px 5px 5px -4px rgba(189,189,189,1);
 	
 }	
@@ -81,7 +85,7 @@ header h1 {
 }
 .intro {
 	text-align: center;
-	background-color: #f6f6f6;
+	background-color: #EEEEEE;
 	padding-bottom: 35px;
 }
 .intro h2 {
@@ -117,7 +121,7 @@ header h1 {
 .fonctionnement li {
     display: flex;
 	list-style: none;
-    background-color: #f6f6f6;
+    background-color: #EEEEEE;
     border-radius: 20px;
     margin: 15px 0 15px 0;
     box-shadow: 0px 4px 5px 0px rgba(158,158,158 ,1);
@@ -148,8 +152,9 @@ header h1 {
 /*Restaurants*/
 
 .restaurants {
-    background-color: #f6f6f6;
+    background-color: #EEEEEE;
     margin-top: 50px;
+    padding-bottom: 30px;
 }
 .restaurants h2 {
     width: 85%;
@@ -166,6 +171,7 @@ header h1 {
     border-radius: 10px;
 }
 .restaurants img {
+    background-color: #EEEEEE;
     width: 100%;
     height: 150px;
     border-radius: 10px 10px 0 0;
@@ -213,7 +219,6 @@ footer {
     width: 100%;
     background-color: #353535;
     color: white;
-    margin-top: 30px;
     padding-top: 10px;
     padding-bottom: 15px;
 }
@@ -237,4 +242,125 @@ margin-left: 8px;
 } 
 .iconText1 {
     padding-left: 8px;
+}
+
+/* PAGES RESTO */
+
+/* HEADER */
+
+.back {
+    display: inline-block;
+    font-size: 1.5em;
+    width: 14%;
+    text-align: center;
+    margin:20px 0 15px 0;
+}
+.headerR {
+    display: inline-block;
+    font-family: 'shrikhandregular';
+    width: 70%;
+    margin-bottom: 15px;
+}
+.back a {
+    color: black;
+}
+/* SECTION HEADER */
+.bodyResto {
+    background-color: #EEEEEE;
+}
+.bodyResto header {
+    height: 250px;
+}
+figure {
+    margin: 0;
+}
+.imgResto {
+    width: 100%;
+}
+.presResto {
+    background-color: #EEEEEE;
+    position: relative;
+    bottom: 50px;
+    border-radius: 25px 25px 0 0;
+}
+.nomResto {
+    display: inline-block;
+    font-family: 'shrikhandregular';
+    width: 70%;
+    margin-left: 20px;
+    margin-bottom: 0;
+}
+.coeurResto {
+    display: inline-block;
+    font-size: 1.5em;
+    width: 20%;
+    text-align: center;
+    font-weight: lighter;
+    margin: 20px 0 20px 0;
+}
+/* La carte */
+.menu ul {
+    padding: 0;
+}
+.menuType {
+    width: 90%;
+    margin: auto;
+    font-weight: normal;
+    text-transform: uppercase;
+    opacity: 0.8;
+}
+.underline {
+    border-bottom: solid 2px #99e2d0;
+}
+.carteChoix {
+    position: relative;
+    width: 90%;
+    margin: auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px 0px rgba(158,158,158 ,1);
+    margin-bottom: 15px;
+}
+.menuName {
+    font-weight: bold;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+.menuSup {
+    display: inline-block;
+    width: 85%;
+    font-family: 'roboto_condensedlight';
+    font-size: 0.9em;
+    margin-bottom: 0;
+    margin-top: 5px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+.menuPrix {
+    display: inline-block;
+    width: 10%
+    font-weight:bold;
+    opacity: 0.8;
+    margin-bottom: 0;
+    margin-top: 5px;
+    padding-bottom: 10px
+}
+.order {
+    height: 160px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.order button {
+    align-self: center;
+    width: 50%;
+    color: rgba(255,255,255,0.9);
+    font-weight: bold;
+    padding: 15px 10px 15px 10px;
+    background: linear-gradient(to top, #9356DC, #FF79DA);
+    border: none;
+    border-radius: 10% / 50%;
+    box-shadow: 0px 4px 10px 0px rgba(158,158,158 ,1);
 }
