@@ -1,58 +1,24 @@
-/* Font Shrikhand */
-@font-face {
-    font-family: 'shrikhandregular';
-    src: url('font/shrikhand-regular-webfont.woff2') format('woff2'),
-         url('font/shrikhand-regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-/* Font Roboto */
-@font-face {
-    font-family: 'roboto_condensedbold';
-    src: url('font/robotocondensed-bold-webfont.woff2') format('woff2'),
-         url('font/robotocondensed-bold-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'roboto_condensedbold_italic';
-    src: url('font/robotocondensed-bolditalic-webfont.woff2') format('woff2'),
-         url('font/robotocondensed-bolditalic-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'roboto_condenseditalic';
-    src: url('font/robotocondensed-italic-webfont.woff2') format('woff2'),
-         url('font/robotocondensed-italic-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'roboto_condensedlight';
-    src: url('font/robotocondensed-light-webfont.woff2') format('woff2'),
-         url('font/robotocondensed-light-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'roboto_condensedlight_italic';
-    src: url('font/robotocondensed-lightitalic-webfont.woff2') format('woff2'),
-         url('font/robotocondensed-lightitalic-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'roboto_condensedregular';
-    src: url('font/robotocondensed-regular-webfont.woff2') format('woff2'),
-         url('font/robotocondensed-regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-/* Body */
+/*  -- Box-Sizing -- */
+* {
+    box-sizing: border-box;
+} 
+/* -- html -- Initialisation des variables -- */
+html {
+    --font-roboto: 'Roboto', sans-serif;
+    --font-shrikhand: 'Shrikhand', cursive;
+    --primary-color: rgba(147, 86, 220, 1);
+    --secondary-color: rgba(255, 121, 218, 1);
+    --primary-colorL: rgba(146, 86, 220, 0.9);
+    --secondary-colorL: rgba(255, 121, 217, 0.9);
+    --tertiary-color: #99E2D0;
+    --main-bg: #EEEEEE;
+    --darker-bg: #E0E0E0;
+    --shadow-color: #bdbdbd; 
+} 
+/* -- Body -- Généralisation des décoration <li> et <a> -- */
 body {
 	margin: 0;
-    font-family: 'roboto_condensedregular';
+    font-family: var(--font-roboto);
 }
 li {
     list-style: none;
@@ -60,53 +26,60 @@ li {
 a {
     text-decoration: none;
 }
-/* Header */
+/*  -- Header -- */
 header h1 {
-	font-family: 'shrikhandregular';
+	font-family: var(--font-shrikhand);
 	text-align: center;
-	margin: 20px 0 15px 0;
+    margin: 20px 0 15px 0;
+    color: black;
 }
-
-/* Section 1 */
-
+/* -- Index/Section:1 -- GeoLocalisation -- Introduction -- Bouton Lancement -- */
 .geo {
 	display: flex;
 	justify-content: center;
-	background-color: #E0E0E0;
-	box-shadow: inset 0px 5px 5px -4px rgba(189,189,189,1);
-	
-}	
+	background-color: var(--darker-bg);
+    box-shadow: inset 0px 5px 5px -4px var(--shadow-color);
+}
 .geo p {
 	font-weight: bold;
-	font-size: 0.8em;
+    font-size: 0.8em;
+    cursor: pointer;
 }
 .mapMarker {
-	margin-right: 5px;
+    margin-right: 5px;
+    cursor: pointer;
 }
 .intro {
 	text-align: center;
-	background-color: #EEEEEE;
+	background-color: var(--main-bg);
 	padding-bottom: 35px;
 }
 .intro h2 {
 	width: 75%;
-	margin :auto;
+    margin :auto;
+    font-weight: bolder;
 	padding-top: 20px;
 }
 .intro p {
-	font-family: 'roboto_condensedlight';
+	opacity: 0.8;
 }
 .intro button {
-	color: rgba(255,255,255,0.9);
+	color: #ffffffe6;
 	font-weight: bold;
-	padding: 15px 10px 15px 10px;
-	background: linear-gradient(to top, #9356DC, #FF79DA);
+	padding: 15px;
+	background: linear-gradient(to top, var(--primary-color), var(--secondary-color));
 	border: none;
 	border-radius: 10% / 50%;
-	box-shadow: 0px 4px 10px 0px rgba(158,158,158 ,1);
+    box-shadow: 0px 5px 4px var(--shadow-color);
+    cursor: pointer;
+    transition: all 0.2s;
 }
-/* Fonctionnement */
-
+.intro button:hover {
+    background: linear-gradient(to top, var(--primary-colorL), var(--secondary-colorL));
+    transform: scale(1.01);
+    box-shadow: 0px 7px 10px var(--shadow-color);
+}
+/* -- Index/Section2: -- Fonctionnement de l'application */
 .fonctionnement h2 {
     width: 85%;
     margin: auto;
@@ -116,26 +89,27 @@ header h1 {
     width: 85%;
     margin: auto;
     padding: 0;
-    text-align: center;
 }
 .fonctionnement li {
     display: flex;
-	list-style: none;
-    background-color: #EEEEEE;
+    align-items: center;
+    background: var(--main-bg);
     border-radius: 20px;
     margin: 15px 0 15px 0;
-    box-shadow: 0px 4px 5px 0px rgba(158,158,158 ,1);
+    box-shadow: 0px 5px 4px var(--shadow-color);
+    transition: all 0.2s;
 }
 .fonctionnement p {
     margin-left: 5px;
     margin-right: 5px;
+    text-align: center;
+    line-height: 1.6;
 }
 .liNumber {
     position: relative;
     right: 15px;
     width: 25px;
-    height: 25px;
-    background-color: #9356DC;
+    background-color: var(--primary-color);
     border-radius: 50%;
     color: white;
 }
@@ -143,16 +117,21 @@ header h1 {
     position: relative;
     right: 10px;
     width: 25px;
-    height: 25px;
     opacity: 0.7;
 }
 .liChoice {
+    font-size: 0.8em;
     font-weight: bold;
 }
-/*Restaurants*/
+.fonctionnement li:hover {
+    background: rgba(146, 86, 220, 0.2);
+    transform: scale(1.01);
+    box-shadow: 0px 7px 10px var(--shadow-color);
+}
+/* -- Index/Section:3 Restaurants -- */
 
 .restaurants {
-    background-color: #EEEEEE;
+    background-color: var(--main-bg);
     margin-top: 50px;
     padding-bottom: 30px;
 }
@@ -166,12 +145,13 @@ header h1 {
     position: relative;
     width: 85%;
     margin: auto;
-    box-shadow: 0px 5px 10px 0px rgba(158,158,158 ,1);
+    box-shadow: 0px 5px 4px var(--shadow-color);
     margin-bottom: 20px;
     border-radius: 10px;
+    transition: all 0.5s;
 }
 .restaurants img {
-    background-color: #EEEEEE;
+    background-color: var(--main-bg);
     width: 100%;
     height: 150px;
     border-radius: 10px 10px 0 0;
@@ -180,7 +160,7 @@ header h1 {
     position: absolute;
     top: 0;
     right: 10px;
-    background-color: #99E2D0;
+    background-color: var(--tertiary-color);
     color: #00796B;
     border-radius: 2px;
     padding: 5px 10px;
@@ -195,25 +175,33 @@ header h1 {
 .restoName {
     color: black;
     font-weight: bold;
-    margin-bottom: 0;
+    margin-bottom: 5px;
     margin-top: 0;
     padding: 15px 0 0 10px;
+    font-size: 1.1em;
 }
 .restoLieu {
     color: black;
-    font-family: 'roboto_condensedlight';
     margin-top: 0;
     margin-bottom: 0;
     padding-left: 10px;
 }
 .restoHeart {
     position: absolute;
+    width: 20px;
+    height: 20px;
+    background:url(images/heart-regular.svg);
     right: 10px;
-    top: 5px;
-    color: black;
-    font-size: 1.4em;
+    top: -8px;
 }
-/* FOOTER */
+.restoHeart:active {
+    background: url(images/heart-solid.svg);
+}
+.resto:hover {
+    transform: scale(1.01);
+    box-shadow: 0px 7px 10px var(--shadow-color);
+}
+/* -- Footer -- */
 
 footer {    
     width: 100%;
@@ -223,12 +211,9 @@ footer {
     padding-bottom: 15px;
 }
 footer h3 {
-    font-family: 'shrikhandregular';
+    font-family: var(--font-shrikhand);
     font-weight: normal;
     padding-left: 40px;
-}
-footer li {
-    list-style: none;
 }
 footer p {
     margin-bottom: 0;
@@ -243,7 +228,9 @@ margin-left: 8px;
 .iconText1 {
     padding-left: 8px;
 }
-
+footer a:hover {
+    color: rgba(255, 255, 255, 0.658);
+}
 /* PAGES RESTO */
 
 /* HEADER */
@@ -257,7 +244,7 @@ margin-left: 8px;
 }
 .headerR {
     display: inline-block;
-    font-family: 'shrikhandregular';
+    font-family: 'Shrikhand', cursive;
     width: 70%;
     margin-bottom: 15px;
 }
@@ -286,7 +273,7 @@ figure {
 }
 .nomResto {
     display: inline-block;
-    font-family: 'shrikhandregular';
+    font-family: 'Shrikhand', cursive;
     width: 75%;
     margin-left: 20px;
     margin-bottom: 0;
@@ -335,7 +322,7 @@ figure {
 .menuSup {
     display: inline-block;
     width: 85%;
-    font-family: 'roboto_condensedlight';
+    font-family: 'Roboto', sans-serif;
     font-size: 0.9em;
     margin-bottom: 0;
     margin-top: 5px;
@@ -344,7 +331,7 @@ figure {
 }
 .menuPrix {
     display: inline-block;
-    width: 10%
+    width: 10%;
     font-weight:bold;
     opacity: 0.8;
     margin-bottom: 0;
