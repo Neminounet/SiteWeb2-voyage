@@ -97,6 +97,7 @@ header h1 {
     border-radius: 20px;
     margin: 15px 0 15px 0;
     box-shadow: 0px 5px 4px var(--shadow-color);
+    cursor: pointer;
     transition: all 0.2s;
 }
 .fonctionnement p {
@@ -202,7 +203,6 @@ header h1 {
     box-shadow: 0px 7px 10px var(--shadow-color);
 }
 /* -- Footer -- */
-
 footer {    
     width: 100%;
     background-color: #353535;
@@ -228,65 +228,97 @@ margin-left: 8px;
 .iconText1 {
     padding-left: 8px;
 }
+footer a {
+    color: white;
+    text-decoration: none;
+}
 footer a:hover {
     color: rgba(255, 255, 255, 0.658);
 }
-/* PAGES RESTO */
-
-/* HEADER */
-
+/* -- Pages des Restaurants */
+/* -- restaurants/Header --  Avec flèche Retour*/
 .back {
     display: inline-block;
     font-size: 1.5em;
     width: 14%;
     text-align: center;
     margin:20px 0 15px 0;
+    transition: transform 0.5s;
+}
+.back:hover {
+    transform: scale(1.5);
 }
 .headerR {
     display: inline-block;
-    font-family: 'Shrikhand', cursive;
+    font-family: var(--font-shrikhand);
     width: 70%;
     margin-bottom: 15px;
 }
 .back a {
     color: black;
 }
-/* SECTION HEADER */
+/* --Restaurants/Section1: -- Header */
 .bodyResto {
-    background-color: #EEEEEE;
+    background: var(--main-bg);
 }
-.bodyResto header {
-    position: relative;
+.bannièreResto-alf {
+    width: 100%;
+    height: 30vh;
+    background-image: url(images/restaurants/alafrancaise.jpg);
+    background-position: center center;
+    background-size: cover;
 }
-figure {
-    margin: 0;
+.bannièreResto-adds {
+    width: 100%;
+    height: 30vh;
+    background-image: url(images/restaurants/delicesens.jpg);
+    background-position: center center;
+    background-size: cover;
+} 
+.bannièreResto-lpdg {
+    width: 100%;
+    height: 30vh;
+    background-image: url(images/restaurants/palettegout.jpg);
+    background-position: center center;
+    background-size: cover;
+}
+.bannièreResto-ne {
+    width: 100%;
+    height: 30vh;
+    background-image: url(images/restaurants/notenchantée.jpg);
+    background-position: center center;
+    background-size: cover;
 }
 .imgResto {
     width: 100%;
+    height: 80%;
+    background: transparent;
 }
 .presResto {
-    background-color: #EEEEEE;
-    position: absolute;
+    background-color: var(--main-bg);
     width: 100%;
-    bottom: 0;
+    height: 20%;
+    display: flex;
+    padding-top: 20px;;
     border-radius: 25px 25px 0 0;
 }
 .nomResto {
-    display: inline-block;
-    font-family: 'Shrikhand', cursive;
-    width: 75%;
-    margin-left: 20px;
-    margin-bottom: 0;
+    font-family: var(--font-shrikhand);
+    width: 80%;
+    margin: 0;
 }
 .coeurResto {
-    display: inline-block;
-    font-size: 1.5em;
-    width: 15%;
-    text-align: center;
-    font-weight: lighter;
-    margin: 20px 0 20px 0;
+    width: 20%;
+    background-image: url(images/heart-regular.svg);
+    background-size: 35%;
+    background-repeat: no-repeat;
+    background-position: center top;
+    margin: 0;
 }
-/* La carte */
+.coeurResto:active {
+    background-image: url(images/heart-solid.svg);
+}
+/* -- article/La carte -- */
 .menu {
     margin-top: 30px;
 }
@@ -294,7 +326,7 @@ figure {
     padding: 0;
 }
 .menuType {
-    width: 90%;
+    width: 80%;
     margin: auto;
     font-weight: normal;
     text-transform: uppercase;
@@ -303,59 +335,117 @@ figure {
 .underline {
     border-bottom: solid 2px #99E2D0;
 }
-.carteChoix {
-    position: relative;
-    width: 90%;
-    margin: auto;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0px 5px 10px 0px rgba(158,158,158 ,1);
-    margin-bottom: 15px;
+/* -- Carte Animée -- */
+.card-carrier {
+    width: 100%;
+  }
+.card {
+width: 90%;
+overflow: hidden;
+margin: 20px 16px;
+display:flex;
+background: white;
+border-radius: 20px;
+box-shadow: 0 5px 4px #bdbdbd;
+cursor: pointer;
 }
-.menuName {
-    font-weight: bold;
-    margin-bottom: 0;
-    margin-top: 0;
-    padding-left: 10px;
-    padding-top: 10px;
+
+.card-left {
+width: 90%;
+border-radius: 20px 0 0 20px;
+display: flex;
+transition: width 0.2s;
 }
-.menuSup {
-    display: inline-block;
-    width: 85%;
-    font-family: 'Roboto', sans-serif;
-    font-size: 0.9em;
-    margin-bottom: 0;
-    margin-top: 5px;
-    padding-left: 10px;
-    padding-bottom: 10px;
+.card-leftE {
+width: 5%;
 }
-.menuPrix {
-    display: inline-block;
-    width: 10%;
-    font-weight:bold;
-    opacity: 0.8;
-    margin-bottom: 0;
-    margin-top: 5px;
-    padding-bottom: 10px
+.card-leftI {
+width: 95%;
 }
+.menu-name {
+margin: 5px 0;
+font-size: 0.8em;
+font-weight: bold;
+overflow: hidden;
+white-space: nowrap;
+text-overflow: ellipsis;
+}
+.menu-desc {
+margin: 5px 0;    
+opacity: 0.7;
+font-size: 0.75em;
+overflow: hidden;
+white-space: nowrap;
+text-overflow: ellipsis;
+}
+.card-center {
+display: flex;
+justify-content: center;
+align-items: flex-end;
+width: 15%;
+transition: width 0.2s;
+}
+.menu-price {
+font-weight: bold;
+}
+.card-right {
+width: 0;
+overflow: hidden;
+display: flex;
+background: #99E2D0;
+border-radius: 0 20px 20px 0;
+transition: width 0.2s;
+}
+.card-rightI {
+width: 70%;
+display:flex;
+justify-content: center;
+align-items: center
+}
+.order-val {
+background: white;
+padding: 2px 5px;
+border-radius: 50%;
+color: #99E2D0;
+font-weight: bold;
+transition: transform 0.5s;
+}
+.card-rightE {
+width: 30%;
+}
+.card:hover .card-left {
+width: 60%;
+}
+.card:hover .card-center {
+width: 10%;
+}
+.card:hover .card-right {
+width: 30%;
+}
+.card:hover .order-val {
+transform: rotate(-360deg);
+}
+/* -- Bouton : Order -- */
 .order {
     height: 160px;
     width: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 .order button {
-    align-self: center;
     width: 50%;
-    color: rgba(255,255,255,0.9);
+    color: #ffffffe6;
     font-weight: bold;
     padding: 15px 10px 15px 10px;
-    background: linear-gradient(to top, #9356DC, #FF79DA);
+    background: linear-gradient(to top, var(--primary-color), var(--secondary-color));
     border: none;
     border-radius: 10% / 50%;
-    box-shadow: 0px 4px 10px 0px rgba(158,158,158 ,1);
+    box-shadow: 0px 5px 4px var(--shadow-color);
+    cursor: pointer;
 }
-footer a {
-    color: white;
-    text-decoration: none;
+.order button:hover {
+    background: linear-gradient(to top, var(--primary-colorL), var(--secondary-colorL));
+    transform: scale(1.01);
+    box-shadow: 0px 7px 10px var(--shadow-color);
 }
