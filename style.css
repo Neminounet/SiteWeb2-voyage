@@ -8,8 +8,8 @@ html {
     --font-shrikhand: 'Shrikhand', cursive;
     --primary-color: rgba(147, 86, 220, 1);
     --secondary-color: rgba(255, 121, 218, 1);
-    --primary-colorL: rgba(146, 86, 220, 0.9);
-    --secondary-colorL: rgba(255, 121, 217, 0.9);
+    --primary-colorL: rgba(146, 86, 220, 0.7);
+    --secondary-colorL: rgba(255, 121, 217, 0.7);
     --tertiary-color: #99E2D0;
     --main-bg: #EEEEEE;
     --darker-bg: #E0E0E0;
@@ -143,63 +143,111 @@ header h1 {
     padding-top: 20px
 }
 .resto {
-    position: relative;
     width: 85%;
     margin: auto;
     box-shadow: 0px 5px 4px var(--shadow-color);
     margin-bottom: 20px;
-    border-radius: 10px;
+    border-radius: 20px;
     transition: all 0.5s;
 }
-.restaurants img {
+.restoImg-lpdg {
     background-color: var(--main-bg);
     width: 100%;
-    height: 150px;
-    border-radius: 10px 10px 0 0;
+    height: 20vh;
+    background-image: url(images/restaurants/palettegout.jpg);
+    background-size: cover;
+    background-position: center center;
+    border-radius: 20px 20px 0 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+.restoImg-lne {
+    background-color: var(--main-bg);
+    width: 100%;
+    height: 20vh;
+    background-image: url(images/restaurants/notenchantée.jpg);
+    background-size: cover;
+    background-position: center center;
+    border-radius: 20px 20px 0 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+.restoImg-alf {
+    background-color: var(--main-bg);
+    width: 100%;
+    height: 20vh;
+    background-image: url(images/restaurants/alafrancaise.jpg);
+    background-size: cover;
+    background-position: center center;
+    border-radius: 20px 20px 0 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+.restoImg-ldds {
+    background-color: var(--main-bg);
+    width: 100%;
+    height: 20vh;
+    background-image: url(images/restaurants/delicesens.jpg);
+    background-size: cover;
+    background-position: center center;
+    border-radius: 20px 20px 0 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
 }
 .new {
-    position: absolute;
-    top: 0;
-    right: 10px;
     background-color: var(--tertiary-color);
     color: #00796B;
-    border-radius: 2px;
+    margin-right: 10px;
+    border-radius: 5px;
     padding: 5px 10px;
     font-size: 0.9em;
+    font-weight: bold;
 }
 .restoCarte {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
     background-color: white;
-    padding-bottom: 10px;
-    border-radius: 0 0 10px 10px;
+    border-radius: 0 0 20px 20px;
 }
 .restoName {
     color: black;
     font-weight: bold;
-    margin-bottom: 5px;
-    margin-top: 0;
-    padding: 15px 0 0 10px;
-    font-size: 1.1em;
+    font-size: 0.9em;
+    margin: 10px 0 0 10px;
 }
 .restoLieu {
     color: black;
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-left: 10px;
-}
-.restoHeart {
+    opacity: 0.8;
+    font-size: 0.9em;
+    margin: 5px 0 10px 10px;
+} 
+.restoHeart-regular {
     position: absolute;
-    width: 20px;
-    height: 20px;
-    background:url(images/heart-regular.svg);
-    right: 10px;
-    top: -8px;
+    top: -12px;
+    right: 30px;
+    color: black;
+    font-size: 1.5em;
+    z-index: 2;
 }
-.restoHeart:active {
-    background: url(images/heart-solid.svg);
+.restoHeart-solid {
+    position: absolute;
+    top: -12px;
+    right: 30px;
+    color: transparent;
+    font-size: 1.5em;
+    z-index: 1;
+  }
+.restoHeart-regular:active + .restoHeart-solid {
+    color: var(--primary-color);
 }
 .resto:hover {
-    transform: scale(1.01);
+    transform: scale(1.02);
     box-shadow: 0px 7px 10px var(--shadow-color);
 }
 /* -- Footer -- */
@@ -295,6 +343,7 @@ footer a:hover {
     background: transparent;
 }
 .presResto {
+    position: relative;
     background-color: var(--main-bg);
     width: 100%;
     height: 20%;
@@ -307,17 +356,25 @@ footer a:hover {
     width: 80%;
     margin: 0;
 }
-.coeurResto {
-    width: 20%;
-    background-image: url(images/heart-regular.svg);
-    background-size: 35%;
-    background-repeat: no-repeat;
-    background-position: center top;
-    margin: 0;
+.coeurResto-regular {
+    position: absolute;
+    font-size: 1.5em;
+    right: 25px;
+    top: 0;
+    z-index: 2;
 }
-.coeurResto:active {
-    background-image: url(images/heart-solid.svg);
+.coeurResto-solid {
+    position: absolute;
+    font-size: 1.5em;
+    right: 25px;
+    top: 0;
+    color: transparent;
+    z-index: 1;
 }
+.coeurResto-regular:active + .coeurResto-solid {
+    color: var(--primary-color);
+}
+
 /* -- article/La carte -- */
 .menu {
     margin-top: 30px;
@@ -382,11 +439,12 @@ text-overflow: ellipsis;
 display: flex;
 justify-content: center;
 align-items: flex-end;
-width: 15%;
+width: 10%;
 transition: width 0.2s;
 }
 .menu-price {
 font-weight: bold;
+margin-right: 10px;
 }
 .card-right {
 width: 0;
@@ -417,10 +475,10 @@ width: 30%;
 width: 60%;
 }
 .card:hover .card-center {
-width: 10%;
+width: 15%;
 }
 .card:hover .card-right {
-width: 30%;
+width: 25%;
 }
 .card:hover .order-val {
 transform: rotate(-360deg);
