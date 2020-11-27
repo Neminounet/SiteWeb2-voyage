@@ -1,3 +1,4 @@
+
 /* -- Les Keyframes -- */
 @keyframes progress-bar {
     0% {
@@ -111,7 +112,7 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: plFadeOut 0.5s 5s 1 forwards;
+    animation: plFadeOut 0.5s 3s 1 forwards;
   }
   .mainPage {
     position: absolute;
@@ -120,7 +121,7 @@ a {
     left: 0;
     right: 0;
     opacity:0;
-    animation: mpShowUp 0.5s 5s 1 forwards;
+    animation: mpShowUp 0.5s 3s 1 forwards;
   }
   .loader {
     position: relative;
@@ -146,7 +147,7 @@ a {
     border-radius: 50%;
     transform-origin: left 50%;
     transform: scaleX(0);
-    animation: progress-bar 5s 1;
+    animation: progress-bar 3s 1;
   }
   .pageLoader h1 {
     position: relative; 
@@ -156,16 +157,16 @@ a {
     color: white;
   }
   .oh {
-    animation: oh 5s 0.25s 1;
+    animation: oh 3s 0.25s 1;
   }
   .my {
-    animation: my 5s 0.5s 1;
+    animation: my 3s 0.5s 1;
   }
   .fo {
-    animation: fo 5s 0.75s 1;
+    animation: fo 3s 0.75s 1;
   }
   .od {
-    animation: od 5s 1s 1;
+    animation: od 3s 1s 1;
   }
 /*  -- Header -- */
 header h1 {
@@ -384,7 +385,7 @@ header h1 {
     font-size: 1.5em;
     z-index: 1;
   }
-.restoHeart-regular:active + .restoHeart-solid {
+.restoHeart-regular:hover + .restoHeart-solid {
     color: var(--primary-color);
 }
 .resto:hover {
@@ -495,7 +496,7 @@ footer a:hover {
 .nomResto {
     font-family: var(--font-shrikhand);
     width: 80%;
-    margin: 0;
+    margin: 0 0 0 20px;
 }
 .coeurResto-regular {
     position: absolute;
@@ -691,6 +692,13 @@ transform: rotate(-360deg);
     }
     .fonctionnement p {
         font-size: 1.05em;
+    }
+    .restaurants {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .resto {
+        width: 45%;
     }
     .restoName{
         font-size: 1.1em;
