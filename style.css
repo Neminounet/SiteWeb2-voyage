@@ -681,21 +681,38 @@ footer a:hover {
     .intro p {
         font-size: 1.1em;
     }
+    .fonctionnement h2 {
+        text-align: center;
+    }
+    .fonctionnement ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .fonctionnement li {
+        width: 50%;
+    }
     .fonctionnement p {
         font-size: 1.05em;
     }
     .restaurants {
         display: flex;
         flex-wrap: wrap;
+        margin-top: 20px;
+    }
+    .restaurants h2 {
+        text-align: center;
     }
     .resto {
         width: 45%;
     }
     .restoName{
         font-size: 1.1em;
+        width: 75%;
     }
     .restoLieu {
         font-size: 1.1em;
+        width: 75%;
     }
     .nomResto {
         font-size: 1.7em;
@@ -734,6 +751,7 @@ footer a:hover {
     .fonctionnement ul {
         width: 90%;
         display: flex;
+        flex-direction: row;
         justify-content: space-around;
     }
     .fonctionnement li {
@@ -784,6 +802,9 @@ footer a:hover {
     }
     .nomResto {
         margin: 0 0 0 145px;
+    }
+    .resto {
+        width: 22%;
     }
     .fullMenu {
         flex-wrap: nowrap;
