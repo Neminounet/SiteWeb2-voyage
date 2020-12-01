@@ -77,23 +77,10 @@
 * {
     box-sizing: border-box;
 } 
-/* -- html -- Initialisation des variables -- */
-html {
-    --font-roboto: 'Roboto', sans-serif;
-    --font-shrikhand: 'Shrikhand', cursive;
-    --primary-color: rgba(147, 86, 220, 1);
-    --secondary-color: rgba(255, 121, 218, 1);
-    --primary-colorL: rgba(146, 86, 220, 0.7);
-    --secondary-colorL: rgba(255, 121, 217, 0.7);
-    --tertiary-color: #99E2D0;
-    --main-bg: #EEEEEE;
-    --darker-bg: #E0E0E0;
-    --shadow-color: #bdbdbd;
-} 
 /* -- Body -- Généralisation des décoration <li> et <a> -- */
 body {
 	margin: 0;
-    font-family: var(--font-roboto);
+    font-family: 'Roboto', sans-serif;
 }
 li {
     list-style: none;
@@ -108,7 +95,7 @@ a {
     bottom: 0;
     left: 0;
     right: 0;
-    background: var(--main-bg);
+    background: #EEEEEE;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -152,7 +139,7 @@ a {
   .pageLoader h1 {
     position: relative; 
     right: 52px;
-    font-family: var(--font-shrikhand);
+    font-family: 'Shrikhand', cursive;
     font-size: 1em;
     color: white;
   }
@@ -170,7 +157,7 @@ a {
   }
 /*  -- Header -- */
 header h1 {
-	font-family: var(--font-shrikhand);
+	font-family: 'Shrikhand', cursive;
 	text-align: center;
     margin: 20px 0 15px 0;
     color: black;
@@ -179,8 +166,8 @@ header h1 {
 .geo {
 	display: flex;
 	justify-content: center;
-	background-color: var(--darker-bg);
-    box-shadow: inset 0px 5px 5px -4px var(--shadow-color);
+	background-color: #E0E0E0;
+    box-shadow: inset 0px 5px 5px -4px #bdbdbd;
 }
 .geo p {
 	font-weight: bold;
@@ -193,7 +180,7 @@ header h1 {
 }
 .intro {
 	text-align: center;
-	background-color: var(--main-bg);
+	background-color: #EEEEEE;
 	padding-bottom: 35px;
 }
 .intro h2 {
@@ -209,17 +196,17 @@ header h1 {
 	color: #ffffffe6;
 	font-weight: bold;
 	padding: 15px;
-	background: linear-gradient(to top, var(--primary-color), var(--secondary-color));
+	background: linear-gradient(to top, #9356dc, #ff79da);
 	border: none;
 	border-radius: 10% / 50%;
-    box-shadow: 0px 5px 4px var(--shadow-color);
+    box-shadow: 0px 5px 4px #bdbdbd;
     cursor: pointer;
     transition: all 0.2s;
 }
 .intro button:hover {
-    background: linear-gradient(to top, var(--primary-colorL), var(--secondary-colorL));
+    background: linear-gradient(to top, #9256dcb3, #ff79d9b3);
     transform: scale(1.01);
-    box-shadow: 0px 7px 10px var(--shadow-color);
+    box-shadow: 0px 7px 10px #bdbdbd;
 }
 /* -- Index/Section2: -- Fonctionnement de l'application */
 .fonctionnement h2 {
@@ -235,10 +222,10 @@ header h1 {
 .fonctionnement li {
     display: flex;
     align-items: center;
-    background: var(--main-bg);
+    background: #EEEEEE;
     border-radius: 20px;
     margin: 15px 0 15px 0;
-    box-shadow: 0px 5px 4px var(--shadow-color);
+    box-shadow: 0px 5px 4px #bdbdbd;
     cursor: pointer;
     transition: all 0.2s;
 }
@@ -252,7 +239,7 @@ header h1 {
     position: relative;
     right: 15px;
     width: 25px;
-    background-color: var(--primary-color);
+    background-color: #9356dc;
     border-radius: 50%;
     color: white;
 }
@@ -267,14 +254,14 @@ header h1 {
     font-weight: bold;
 }
 .fonctionnement li:hover {
-    background: rgba(146, 86, 220, 0.2);
+    background: #9256dc33;
     transform: scale(1.01);
-    box-shadow: 0px 7px 10px var(--shadow-color);
+    box-shadow: 0px 7px 10px #bdbdbd;
 }
 /* -- Index/Section:3 Restaurants -- */
 
 .restaurants {
-    background-color: var(--main-bg);
+    background-color: #EEEEEE;
     margin-top: 50px;
     padding-bottom: 30px;
 }
@@ -287,13 +274,13 @@ header h1 {
 .resto {
     width: 85%;
     margin: auto;
-    box-shadow: 0px 5px 4px var(--shadow-color);
+    box-shadow: 0px 5px 4px #bdbdbd;
     margin-bottom: 20px;
     border-radius: 20px;
     transition: all 0.5s;
 }
 .restoImg-lpdg {
-    background-color: var(--main-bg);
+    background-color: #EEEEEE;
     width: 100%;
     height: 20vh;
     background-image: url(images/restaurants/palettegout.jpg);
@@ -305,7 +292,7 @@ header h1 {
     align-items: flex-start;
 }
 .restoImg-lne {
-    background-color: var(--main-bg);
+    background-color: #EEEEEE;
     width: 100%;
     height: 20vh;
     background-image: url(images/restaurants/notenchantée.jpg);
@@ -317,7 +304,7 @@ header h1 {
     align-items: flex-start;
 }
 .restoImg-alf {
-    background-color: var(--main-bg);
+    background-color: #EEEEEE;
     width: 100%;
     height: 20vh;
     background-image: url(images/restaurants/alafrancaise.jpg);
@@ -329,7 +316,7 @@ header h1 {
     align-items: flex-start;
 }
 .restoImg-ldds {
-    background-color: var(--main-bg);
+    background-color: #EEEEEE;
     width: 100%;
     height: 20vh;
     background-image: url(images/restaurants/delicesens.jpg);
@@ -341,7 +328,7 @@ header h1 {
     align-items: flex-start;
 }
 .new {
-    background-color: var(--tertiary-color);
+    background-color: #99E2D0;
     color: #00796B;
     margin-right: 10px;
     border-radius: 5px;
@@ -381,16 +368,18 @@ header h1 {
     position: absolute;
     top: -12px;
     right: 30px;
-    color: transparent;
+    color: #9356dc;
     font-size: 1.5em;
     z-index: 1;
+    transform: scale(0);
+    transition: transform 0.8s;
   }
 .restoHeart-regular:hover + .restoHeart-solid {
-    color: var(--primary-color);
+    transform: scale(1);
 }
 .resto:hover {
     transform: scale(1.02);
-    box-shadow: 0px 7px 10px var(--shadow-color);
+    box-shadow: 0px 7px 10px #bdbdbd;
 }
 /* -- Footer -- */
 footer {    
@@ -401,7 +390,7 @@ footer {
     padding-bottom: 15px;
 }
 footer h3 {
-    font-family: var(--font-shrikhand);
+    font-family: 'Shrikhand', cursive;
     font-weight: normal;
     padding-left: 40px;
 }
@@ -440,7 +429,7 @@ footer a:hover {
 }
 .headerR {
     display: inline-block;
-    font-family: var(--font-shrikhand);
+    font-family: 'Shrikhand', cursive;
     width: 70%;
     margin-bottom: 15px;
 }
@@ -449,7 +438,7 @@ footer a:hover {
 }
 /* --Restaurants/Section1: -- Header */
 .bodyResto {
-    background: var(--main-bg);
+    background: #EEEEEE;
 }
 .bannièreResto-alf {
     width: 100%;
@@ -486,7 +475,7 @@ footer a:hover {
 }
 .presResto {
     position: relative;
-    background-color: var(--main-bg);
+    background-color: #EEEEEE;
     width: 100%;
     height: 20%;
     display: flex;
@@ -494,7 +483,7 @@ footer a:hover {
     border-radius: 25px 25px 0 0;
 }
 .nomResto {
-    font-family: var(--font-shrikhand);
+    font-family: 'Shrikhand', cursive;
     width: 80%;
     margin: 0 0 0 20px;
 }
@@ -510,11 +499,13 @@ footer a:hover {
     font-size: 1.5em;
     right: 25px;
     top: 0;
-    color: transparent;
+    color: #9356dc;
+    transform: scale(0);
+    transition: transform 0.8s;
     z-index: 1;
 }
-.coeurResto-regular:active + .coeurResto-solid {
-    color: var(--primary-color);
+.coeurResto-regular:hover + .coeurResto-solid {
+    transform: scale(1);
 }
 
 /* -- article/La carte -- */
@@ -540,16 +531,16 @@ footer a:hover {
     overflow: hidden;
   }
 .card {
-width: 90%;
-overflow: hidden;
-margin: 20px 16px;
-display:flex;
-background: white;
-border-radius: 20px;
-box-shadow: 0 5px 4px #bdbdbd;
-cursor: pointer;
-opacity:0;
-transform: translate(500%);
+    width: 90%;
+    overflow: hidden;
+    margin: 20px 16px;
+    display:flex;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 5px 4px #bdbdbd;
+    cursor: pointer;
+    opacity:0;
+    transform: translate(500%);
 }
 .card:nth-child(1) {
     animation: cardLanding 0.5s ease-out forwards;
@@ -564,80 +555,80 @@ transform: translate(500%);
     animation: cardLanding 0.5s 1.5s ease-out forwards;
 }
 .card-left {
-width: 90%;
-border-radius: 20px 0 0 20px;
-display: flex;
-transition: width 0.2s;
+    width: 90%;
+    border-radius: 20px 0 0 20px;
+    display: flex;
+    transition: width 0.2s;
 }
 .card-leftE {
-width: 5%;
+    width: 5%;
 }
 .card-leftI {
-width: 95%;
+    width: 95%;
 }
 .menu-name {
-margin: 5px 0;
-font-size: 0.8em;
-font-weight: bold;
-overflow: hidden;
-white-space: nowrap;
-text-overflow: ellipsis;
+    margin: 5px 0;
+    font-size: 0.8em;
+    font-weight: bold;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 .menu-desc {
-margin: 5px 0;    
-opacity: 0.7;
-font-size: 0.75em;
-overflow: hidden;
-white-space: nowrap;
-text-overflow: ellipsis;
+    margin: 5px 0;    
+    opacity: 0.7;
+    font-size: 0.75em;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 .card-center {
-display: flex;
-justify-content: center;
-align-items: flex-end;
-width: 10%;
-transition: width 0.2s;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 10%;
+    transition: width 0.2s;
 }
 .menu-price {
-font-weight: bold;
-margin-right: 10px;
+    font-weight: bold;
+    margin-right: 10px;
 }
 .card-right {
-width: 0;
-overflow: hidden;
-display: flex;
-background: #99E2D0;
-border-radius: 0 20px 20px 0;
-transition: width 0.2s;
+    width: 0;
+    overflow: hidden;
+    display: flex;
+    background: #99E2D0;
+    border-radius: 0 20px 20px 0;
+    transition: width 0.2s;
 }
 .card-rightI {
-width: 70%;
-display:flex;
-justify-content: center;
-align-items: center
+    width: 70%;
+    display:flex;
+    justify-content: center;
+    align-items: center
 }
 .order-val {
-background: white;
-padding: 2px 5px;
-border-radius: 50%;
-color: #99E2D0;
-font-weight: bold;
-transition: transform 0.5s;
+    background: white;
+    padding: 2px 5px;
+    border-radius: 50%;
+    color: #99E2D0;
+    font-weight: bold;
+    transition: transform 0.5s;
 }
 .card-rightE {
-width: 30%;
+    width: 30%;
 }
 .card:hover .card-left {
-width: 60%;
+    width: 60%;
 }
 .card:hover .card-center {
-width: 15%;
+    width: 15%;
 }
 .card:hover .card-right {
-width: 25%;
+    width: 25%;
 }
 .card:hover .order-val {
-transform: rotate(-360deg);
+    transform: rotate(-360deg);
 }
 /* -- Bouton : Order -- */
 .order {
@@ -652,16 +643,16 @@ transform: rotate(-360deg);
     color: #ffffffe6;
     font-weight: bold;
     padding: 15px 10px 15px 10px;
-    background: linear-gradient(to top, var(--primary-color), var(--secondary-color));
+    background: linear-gradient(to top, #9356dc, #ff79da);
     border: none;
     border-radius: 10% / 50%;
-    box-shadow: 0px 5px 4px var(--shadow-color);
+    box-shadow: 0px 5px 4px #bdbdbd;
     cursor: pointer;
 }
 .order button:hover {
-    background: linear-gradient(to top, var(--primary-colorL), var(--secondary-colorL));
+    background: linear-gradient(to top, #9256dcb3, #ff79d9b3);
     transform: scale(1.01);
-    box-shadow: 0px 7px 10px var(--shadow-color);
+    box-shadow: 0px 7px 10px #bdbdbd;
 }
 @media (min-width: 768px) /* -- Tablet size -- */
 {
@@ -677,7 +668,7 @@ transform: rotate(-360deg);
       }
     .pageLoader h1 { 
         right: 130px;
-        font-family: var(--font-shrikhand);
+        font-family: 'Shrikhand', cursive;
         font-size: 2.5em;
         color: white;
       }
