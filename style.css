@@ -349,12 +349,14 @@ header h1 {
     font-weight: bold;
     font-size: 0.9em;
     margin: 10px 0 0 10px;
+    width: 75%;
 }
 .restoLieu {
     color: black;
     opacity: 0.8;
     font-size: 0.9em;
     margin: 5px 0 10px 10px;
+    width: 75%;
 } 
 .restoHeart-regular {
     position: absolute;
@@ -708,11 +710,9 @@ footer a:hover {
     }
     .restoName{
         font-size: 1.1em;
-        width: 75%;
     }
     .restoLieu {
         font-size: 1.1em;
-        width: 75%;
     }
     .nomResto {
         font-size: 1.7em;
