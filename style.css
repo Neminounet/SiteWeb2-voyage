@@ -714,6 +714,20 @@ footer a:hover {
     .restoLieu {
         font-size: 1.1em;
     }
+    footer h3 {
+        font-size: 1.8em;
+        text-align: center;
+        padding-left: 0;
+    }
+    footer ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-left: 0;
+    }
+    footer li {
+        font-size: 1.1em;
+    }
     .nomResto {
         font-size: 1.7em;
         margin: 0 0 0 65px;
@@ -763,20 +777,6 @@ footer a:hover {
     }
     .resto {
         width: 40%;
-    }
-    footer h3 {
-        font-size: 1.8em;
-        text-align: center;
-        padding-left: 0;
-    }
-    footer ul {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding-left: 0;
-    }
-    footer li {
-        font-size: 1.1em;
     }
     .fullMenu {
         display: flex;
